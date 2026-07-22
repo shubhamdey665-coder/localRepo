@@ -1,13 +1,16 @@
-let no =prompt("Enter a number:");
-if(no==0)
+let no = prompt("Enter any number:");
+let reverse =0;
+let last;
+let original=no;
+
+for(;no>0;no = Math.floor(no / 10))
 {
-    console.log("The number is zero");
+    last=no % 10;
+    reverse = reverse * 10 + last;
 }
-else if(no>0)
-{
-    console.log("the number is positive");
+if (original == reverse) {
+    console.log("The number is a palindrome.");
 }
-else
-{
-    console.log("the number is negative");
+else {
+    console.log("The number is not a palindrome.");
 }
